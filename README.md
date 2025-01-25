@@ -1,4 +1,29 @@
-# Paper-Fetcher
+Research Paper Fetcher
+{
+How the Code is Organized
+The program is structured into the following components:
+- main.py: Contains the main logic to fetch and filter research papers from PubMed based on the query.
+- utils/: A folder containing helper functions for API requests, parsing responses, and CSV generation.
+- tests/: Includes test cases to validate the functionality of the program.
+- pyproject.toml: Used by Poetry for managing dependencies and project setup.
+
+Instructions on How to Install Dependencies and Execute the Program
+1. Clone the repository:
+2. Install dependencies using Poetry:
+3. Set your PubMed API key as an environment variable: 
+set PUBMED_API_KEY=”your_api_key_here”
+4. Run the program:
+ - To fetch papers and save the results to a file: ``` poetry run get-papers-list "your query" -f output.csv ``` 
+- To fetch papers and display results in the terminal: ``` poetry run get-papers-list "your query" ```
+Tools and Libraries 
+– PubMed API: For fetching research papers. (https://www.ncbi.nlm.nih.gov/home/develop/api/). 
+- Poetry For dependency management and packaging. (https://python-poetry.org/). 
+- Python Libraries: 
+1.requests: For making HTTP requests to the PubMed API. 
+2.beautifulsoup4: For parsing XML responses. 
+3.argparse: For handling command-line arguments.
+}
+
 import os
 import csv
 import requests
